@@ -1,4 +1,4 @@
-export const url = 'http://vda-lab.github.io/assets/beers.json';
+export const url = 'https://https://api.punkapi.com/v2/beers';
 
 export interface Beer {
 	_id: ID;
@@ -13,7 +13,12 @@ export interface ID {
 }
 
 export async function fetchBeers(): Promise<Beer[]> {
-	const res = await fetch(url);
+	const res = await fetch(url, {
+		mode: 'cors',
+		headers: {
+			'Access-Control-Allow-Origin': '*'
+		}
+	});
 	const beers: Beer[] = await res.json();
 
 	return beers;
