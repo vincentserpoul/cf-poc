@@ -16,8 +16,8 @@
 				{
 					name: 'Radius Mode',
 					type: 'pie',
-					radius: [200, 1400],
-					roseType: 'radius',
+					radius: [200, 500],
+					roseType: 'area',
 					itemStyle: {
 						borderRadius: 5
 					},
